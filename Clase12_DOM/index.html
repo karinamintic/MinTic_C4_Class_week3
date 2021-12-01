@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function recorrer()
+        {
+            //alert(document.getElementById("nombre1").value);
+            /* objetoDOM = document.getElementById("nombre1");
+            objetoDOM.style.background='red';
+            //alert(objetoDOM.value);
+            objetoDOM.placeholder = "Mi nuevo Placeholder";
+            objetoDOM.focus();
+            //console.log(objetoDOM.inventoMio);
+            console.log(objetoDOM.getAttribute(inventoMio)); */
+            /////
+            divLocal=document.getElementById("div1")
+            objetoDOM = divLocal.getElementsByTagName("input");
+            for (let i = 0; i < objetoDOM.length; i++)
+            {
+                console.log("Click"+i);
+                //const element = array[i];
+                if(objetoDOM[i].value.length<=0)
+                {
+                    alert("El campo "+objetoDOM[i].placeholder+" nodebe ser vacio");
+                }
+                //console.log(objetoDOM[i].value);
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <input type="text" name="nombre1" id="nombre1" placeholder="Primer nombre" value = "" inventoMio="caja1"><br>
+        <input type="text" name="nombre2" id="nombre2" placeholder="Segundo nombre" value = ""><br>
+        <input type="text" name="Apellido1" id="Apelido1" placeholder="Apellido1 nombre" value = ""><br>
+    </div>
+
+    <input type="button" value="RECORRER" onclick="recorrer()">
+</body>
+</html>
