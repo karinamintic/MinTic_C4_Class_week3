@@ -26,9 +26,12 @@
                 if(objetoDOM[i].value.length<=0)
                 {
                     alert("El campo "+objetoDOM[i].placeholder+" nodebe ser vacio");
+                    objetoDOM[i].focus();
+                    return false;
                 }
                 //console.log(objetoDOM[i].value);
             }
+            return true;
 
         }
     </script>
